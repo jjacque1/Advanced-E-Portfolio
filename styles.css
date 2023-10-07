@@ -200,4 +200,28 @@ nav {
     margin-bottom: 60px;
 }
 
-/* 48:00 */
+.project__img {
+    width: 100%;
+}
+
+.project__wrapper {
+    position: relative;
+}
+
+.project__description {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    max-width: 550px;
+}
+
+.project__wrapper--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1d25;
+}
