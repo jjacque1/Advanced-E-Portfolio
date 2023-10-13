@@ -52,11 +52,11 @@ label {
   font-weight: bold;
 }
 
-input:hover, textarea:hover {
+input:hover {
   border-color: #f06449;
 }
 
-input:focus, textarea:focus {
+textarea:hover {
   border-color: #f06449;
 }
 
@@ -75,6 +75,7 @@ input:focus, textarea:focus {
 }
 
 .click {
+  cursor: pointer;
   transition: all 300ms ease;
 }
 
@@ -230,9 +231,9 @@ nav {
 #personal-logo {
   width: 50px;
   height: 50px;
-  /* transform: scale(2.5); */
-  /* background-color: rgb(245, 245, 245); */
-  filter: invert();
+  transform: scale(1.8);
+  padding-top: 2px;
+  border-radius: 50%;
 }
 
 .nav__link--list {
@@ -272,6 +273,10 @@ nav {
 .modal__half {
   width: 50%;
   padding: 40px 72px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .modal__about {
@@ -340,6 +345,11 @@ nav {
 
 .form__item {
   margin-bottom: 20px;
+  transition-duration: all 300ms ease;
+}
+
+.form__item:hover label {
+  color: #f06449;
 }
 
 .form__submit {
@@ -362,6 +372,55 @@ nav {
 .form__submit:active {
   border-color: #f06449;
   color: #f06449;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.modal__overlay--loading {
+  background-color: #242424;
+  z-index: -1;
+}
+
+.modal__overlay--success {
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+
+.fa-spinner {
+  font-size: 80px;
+  animation: spinner 1550ms infinite linear;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 36px;
+  z-index: 100;
 }
 
 /* PROJECTS */
@@ -460,6 +519,8 @@ footer {
 
 .footer__logo {
     width: 70px;
+    transform: scale(1);
+    border-radius: 50%;
 }
 
 .footer__row {
