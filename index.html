@@ -134,18 +134,18 @@
           <h4 class="modal__sub-title modal__sub--title--contact">
             I'm currently open to new opportunities
           </h4>
-          <form onsubmit="contact()" id="contact__form">
+          <form onsubmit="contact(event)" id="contact__form">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input type="text" class="input" name="user_name" required> </input>
+              <input type="text" class="input" name="user_name" > </input>
             </div>
             <div class="form__item">
               <label class="form__item--label">E-mail</label>
-              <input type="email" class="input" name="user_email" required> </input>
+              <input type="email" class="input" name="user_email" > </input>
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
-              <textarea type="text" class="input" name="message" required> </textarea>
+              <textarea type="text" class="input" name="message"> </textarea>
             </div>
             <button id="contact_-submit" class="form__submit">
               Send it my way

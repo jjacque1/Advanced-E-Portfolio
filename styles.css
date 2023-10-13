@@ -399,6 +399,10 @@ nav {
   padding: 28px;
 }
 
+.modal__overlay--visible {
+  z-index: 1;
+}
+
 .fa-spinner {
   font-size: 80px;
   animation: spinner 1550ms infinite linear;
