@@ -658,3 +658,7 @@ footer {
   top: 80vh;
   left: 80vw;
 }
+
+@media (max-width: 760px) {
+  .title
+}
