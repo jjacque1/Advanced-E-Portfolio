@@ -26,7 +26,7 @@
           <img id="personal-logo" class="personal__logo--hover--effect" src="./assets/JJ.logo.PNG" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black "onclick="toggleModal()"
@@ -80,9 +80,11 @@
           </div>
         </div>
       </header>
+      <a href="#">
       <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -130,7 +132,7 @@
         <div class="modal__half modal__contact">
           <i class="fa-regular fa-circle-xmark modal__exit click" onclick="toggleModal()"></i>
           <h3 class="modal__tital modal__title--contact">
-            Let's havea a chat!
+            Let's have a chat!
           </h3>
           <h4 class="modal__sub-title modal__sub--title--contact">
             I'm currently open to new opportunities
@@ -288,22 +290,22 @@
           </figure>
           <div class="footer__social--list">
             <a
-              href="#"
+              href="#" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Github</a
             >
             <a
-              href="#"
+              href="#" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Linkedin</a
             >
             <a
-              href="#"
+              href="#" target="_blank" onclick="toggleModal()"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Contact</a
             >
             <a
-              href="#"
+              href="./assets/David Bragg Resume.pdf" target="_blank"
               class="footer__social--link link__hover-effect link__hover-effect--white"
               >Resume</a
             >
