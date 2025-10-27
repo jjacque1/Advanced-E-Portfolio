@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/a84b1620d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+      </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("9LHVBFFS8KSaWHz2h");
+   })();
+</script>
+  </head>
+  <body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img id="personal-logo" class="personal__logo--hover--effect" src="./assets/JJ.logo.PNG" alt="" />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black "onclick="toggleModal()"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >contact</a
+            >
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title orange">I'm Jackson.</h1>
+          <p class="header__para">
+            I'm a <b class="orange"> Full Stack Software Engineer </b> with a
+            strong passion for building web applications with great user
+            experiences.
+            <br />
+            Here's a bit more <b class="orange click" onclick="toggleModal()">about me</b>
+          </p>
+          <div class="social__list">
+            <a href="" target="_blank" class="social__link click">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/jjacque1" target="_blank" class="social__link click">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://docs.google.com/document/d/1zOfHTxOfmjMzFgnwgslsLT2lytR7b1p79EYJf9JCcFU/edit?tab=t.0#heading=h.9ds9tyuzgzj6" target="_blank" class="social__link click">
+              <i class="fa-solid fa-file"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+          <h4 class="modal__sub-title modal__sub--title--about">
+            Full stack software Engineer.
+          </h4>
+          <p class="modal__para">
+            I'm a 26 year-old
+            <b class="orange">full stack software engineer </b> with a
+            strong passion for developing web applications with
+            <b class="orange">great user experiences.</b>
+            <br />
+            I'm currently studying
+            <b class="orange">MERN stack with Per Scholas.</b> I
+            learned full stack engineering from the
+            <b class="orange">most experienced engineers</b>
+            in the industry who focuses on
+            <b class="orange">real world skills</b> and
+            <b class="orange">best pracitices</b> in the industry.
+          </p>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/HTML5_badge.png" alt="html">
+              <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/css.png" alt="">
+              <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/javascript.png" alt="">
+              <span class="language__name">Javascript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/react.png" alt="">
+              <span class="language__name">React</span>
+            </figure>
+          </div>
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/mongodb.png" alt="html">
+              <span class="language__name">Mongo DB</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/express.png" alt="">
+              <span class="language__name">Express JS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="./assets/nodejs.png" alt="">
+              <span class="language__name">Node js</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+          <i class="fa-regular fa-circle-xmark modal__exit click" onclick="toggleModal()"></i>
+          <h3 class="modal__tital modal__title--contact">
+            Let's have a chat!
+          </h3>
+          <h4 class="modal__sub-title modal__sub--title--contact">
+            I'm currently open to new opportunities
+          </h4>
+          <form onsubmit="contact(event)" id="contact__form">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input type="text" class="input" name="user_name" > </input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">E-mail</label>
+              <input type="email" class="input" name="user_email" > </input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea type="text" class="input" name="message"> </textarea>
+            </div>
+            <button id="contact_-submit" class="form__submit">
+              Send it my way
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking to you soon.
+          </div>
+        </div>
+      </div>
+      <!-- <img src="./assets/semi circle.svg" class="shape shape--0">
+      <img src="./assets/circle.svg" class="shape shape--1">
+      <img src="./assets/squiggly.svg" class="shape shape--2">
+      <img src="./assets/circle.svg" class="shape shape--3">
+      <img src="./assets/triangle.svg" class="shape shape--4">
+      <img src="./assets/circle.svg" class="shape shape--5">
+      <img src="./assets/squiggly.svg" class="shape shape--6">
+      <img src="./assets/circle.svg" class="shape shape--7">
+      <img src="./assets/semi circle.svg" class="shape shape--8"> -->
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="orange">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <a href="https://liberary-react-git-master-jackson-jacques-projects.vercel.app/" target="_blank" class="project-text-color">
+                <div class="project__wrapper">
+                <img
+                  src="./assets/Screenshot.png.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    E-commerce project
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    This is an interactive book web application that simulate a real life book store. Users can filter books by price high to low and price low to high, users can also filter books by ratings. In addition to filtering and sorting, users can add books to cart and remover books from cart.
+                  </p>
+                  <div class="project__ddescription--links">
+                    <a href="https://github.com/jjacque1" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              </a>
+              
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis qui placeat asperiores tempora voluptates obcaecati?
+                    Natus voluptas veritatis aliquid quam beatae ex
+                    reprehenderit vitae, maiores aliquam facilis, aperiam
+                    debitis ullam!
+                  </p>
+                  <div class="project__ddescription--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Projects
+                  </h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Facilis qui placeat asperiores tempora voluptates obcaecati?
+                    Natus voluptas veritatis aliquid quam beatae ex
+                    reprehenderit vitae, maiores aliquam facilis, aperiam
+                    debitis ullam!
+                  </p>
+                  <div class="project__ddescription--links">
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure class="footer__logo--img">
+            <img src="./assets/JJ.logo.PNG" class="footer__logo" alt="" />
+          </figure>
+          <div class="footer__social--list">
+            <a
+              href="#" target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Github</a
+            >
+            <a
+              href="#" target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Linkedin</a
+            >
+            <a
+              href="#" target="_blank" onclick="toggleModal()"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Contact</a
+            >
+            <a
+              href="./assets/David Bragg Resume.pdf" target="_blank"
+              class="footer__social--link link__hover-effect link__hover-effect--white"
+              >Resume</a
+            >
+          </div>
+          <div class="footer__copyright">
+            Copyright &copy 2023 Jackson Jacque
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
