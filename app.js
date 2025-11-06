@@ -17,7 +17,7 @@ function moveBackground(event) {
 function toggleContrast() {
   contrastToggle = !contrastToggle;
   if (contrastToggle) {
-    document.body.classList += " dark-theme";
+    document.body.classList += "dark-theme";
   } else {
     document.body.classList.remove("dark-theme");
   }
@@ -56,4 +56,4 @@ function toggleModal() {
   document.body.classList += " modal--open";
 }
 
-// 2:30:03
+
