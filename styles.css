@@ -252,14 +252,14 @@ i[class^="fa-"]:nth-child(even) {
 
 
 /* animation */
-@keyframes nameScroll {
+/* @keyframes nameScroll {
   0% {
     transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
   }
-}
+} */
 
 .tech-marquee {
   margin-top: 16px;
@@ -298,10 +298,10 @@ i[class^="fa-"]:nth-child(even) {
 /* LEFT -> RIGHT (opposite of your name) */
 @keyframes techScrollRight {
   0% {
-    transform: translateX(-110%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(110%);
+    transform: translateX(100%);
   }
 }
 
