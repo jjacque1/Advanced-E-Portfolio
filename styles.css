@@ -179,6 +179,89 @@ nav,
   min-height: 100vh;
 }
 
+.name-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.name-marquee__text {
+  display: inline-block;
+  animation: nameScroll 12s linear infinite;
+}
+
+.name-marquee__text:hover {
+  animation-play-state: paused;
+}
+
+.name-marquee__text {
+  text-shadow:
+    0 0 12px rgba(34,211,238,0.4),
+    0 0 24px rgba(167,139,250,0.3);
+}
+
+.name-marquee__text {
+  animation: nameScroll 18s linear infinite;
+}
+
+/* subtle icon breathing animation */
+i[class^="fa-"],
+i[class*=" fa-"] {
+  animation: iconPulse 4.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* keyframes */
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.50);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+}
+
+@keyframes iconPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(34,211,238,0.3));
+  }
+  50% {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 14px rgba(34,211,238,0.5));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(34,211,238,0.3));
+  }
+}
+
+i[class^="fa-"]:nth-child(odd) {
+  animation-delay: 0s;
+}
+i[class^="fa-"]:nth-child(even) {
+  animation-delay: 1.5s;
+}
+
+
+
+/* animation */
+@keyframes nameScroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
 .header {
   position: absolute;
   top: 50%;
