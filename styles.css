@@ -29,7 +29,7 @@ button {
 }
 
 section {
-  background-color: rgb(245, 245, 245);
+  background: linear-gradient(90deg, rgba(34,211,238,0.22), rgba(167,139,250,0.22));
   transition: all 300ms ease;
 }
 
@@ -59,11 +59,11 @@ label {
 }
 
 input:hover {
-  border-color: #f06449;
+  border-color:  linear-gradient(90deg, rgba(34,211,238,0.22), rgba(167,139,250,0.22));
 }
 
 textarea:hover {
-  border-color: #f06449;
+  border-color:  linear-gradient(90deg, rgba(34,211,238,0.22), rgba(167,139,250,0.22));
 }
 
 .container {
@@ -98,9 +98,6 @@ textarea:hover {
   line-height: 1;
 }
 
-.orange {
-  color: #f06449 !important;
-}
 
 .link__hover-effect {
   position: relative;
@@ -204,7 +201,7 @@ nav,
 }
 
 .social__link {
-  background-color: #f06449;
+  background-color: #242424 ;
   color: white;
   padding: 6px;
   width: 32px;
@@ -414,12 +411,12 @@ nav {
 }
 
 .form__item:hover label {
-  color: #f06449;
+  color: #aaddbb;
 }
 
 .form__submit {
-  background-color: #f06449;
-  border: 2px solid #f06449;
+  background-color: #aaddbb;
+  border: 2px solid #aaddbb;
   color: #fff;
   font-weight: 700;
   width: 100%;

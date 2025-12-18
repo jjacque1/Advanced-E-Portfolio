@@ -2,26 +2,26 @@ let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1 / 20;
 
-function moveBackground(event) {
-  const shapes = document.querySelectorAll(".shape");
-  const x = event.clientX * scaleFactor;
-  const y = event.clientY * scaleFactor;
+// function ambientDrift() {
+//   const shapes = document.querySelectorAll(".shape");
 
-  for (let i = 0; i < shapes.length; i++) {
-    const isOdd = i % 2 !== 0;
-    const boolInt = isOdd ? -1 : 1;
-    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`;
-  }
-}
+//   shapes.forEach((shape, i) => {
+//     const x = Math.sin(Date.now() / 4000 + i) * 10;
+//     const y = Math.cos(Date.now() / 5000 + i) * 10;
+
+//     shape.style.transform = `translate(${x}px, ${y}px)`;
+//   });
+
+//   requestAnimationFrame(ambientDrift);
+// }
+
+// ambientDrift();
 
 function toggleContrast() {
   contrastToggle = !contrastToggle;
-  if (contrastToggle) {
-    document.body.classList += "dark-theme";
-  } else {
-    document.body.classList.remove("dark-theme");
-  }
+  document.body.classList.toggle("dark-theme");
 }
+
 
 function contact(event) {
   event.preventDefault();
