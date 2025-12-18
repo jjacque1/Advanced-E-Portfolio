@@ -341,6 +341,10 @@ body:not(.dark-theme) .tech-label {
   color: #242424;
 }
 
+.tech-marquee:hover .tech-marquee__track {
+  animation-play-state: paused;
+}
+
 
 .header {
   position: absolute;
