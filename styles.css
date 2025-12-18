@@ -261,6 +261,86 @@ i[class^="fa-"]:nth-child(even) {
   }
 }
 
+.tech-marquee {
+  margin-top: 16px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tech-marquee__track {
+  display: inline-flex;
+  gap: 28px;
+  align-items: center;
+  animation: techScrollRight 38s linear infinite;
+}
+
+/* icons size */
+.tech-icon {
+  margin-top: 48px;
+  width: 88px;          /* 2x size */
+  height: 88px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 14px rgba(34,211,238,0.3));
+}
+
+
+@media (max-width: 480px) {
+  .tech-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+
+
+/* LEFT -> RIGHT (opposite of your name) */
+@keyframes techScrollRight {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px; /* keeps spacing consistent */
+}
+
+/* label styling */
+.tech-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #fff;
+  opacity: 0.85;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* dark theme polish */
+.dark-theme .tech-label {
+  opacity: 0.9;
+}
+
+/* light mode tech label color */
+body:not(.dark-theme) .tech-label {
+  color: #242424;
+}
+
 
 .header {
   position: absolute;
